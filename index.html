@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoSphere</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .btn {
+      background: #38bdf8;
+      color: #000;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 40px;
+    }
+    .hero {
+      background: #f1f5f9;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 36px;
+    }
+    .services, .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    footer {
+      background: #0f172a;
+      color: #fff;
+      padding: 40px;
+    }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>  <!-- HEADER -->  <header>
+    <h1>ShamsiAIG</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#" class="btn">Get Started</a>
+  </header>  <!-- HERO SECTION -->  <section class="hero" id="home">
+    <h2>ShamsiAIG Crypto Decisions Start Here</h2>
+    <p>ShamsiAIG helps you understand the crypto market, manage risk, and make informed trading and investment decisions with confidence.</p>
+    <a href="#" class="btn">Start Learning Today</a>
+  </section>  <!-- ABOUT SECTION -->  <section id="about">
+    <h2>About Us</h2>
+    <p>ShamsiAIG is a crypto education and market insight platform built to simplify digital assets for everyone. We provide clear explanations, market updates, and practical guidance to help beginners and experienced traders navigate the crypto world safely and confidently.</p>
+    <p>Our goal is to remove confusion, reduce mistakes, and promote smart decision-making in crypto.</p>
+  </section>  <!-- SERVICES SECTION -->  <section id="services">
+    <h2>What We Offer</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Crypto Education</h3>
+        <p>Learn the basics of cryptocurrency, blockchain, trading strategies, and risk management in simple language.</p>
+      </div>
+      <div class="card">
+        <h3>Market Insights</h3>
+        <p>Get regular market analysis, trends, and explanations to help you understand price movements.</p>
+      </div>
+      <div class="card">
+        <h3>Trading Guidance</h3>
+        <p>Discover proven trading principles, discipline tips, and tools to improve your trading skills.</p>
+      </div>
+    </div>
+  </section>  <!-- BENEFITS SECTION -->  <section>
+    <h2>Why Choose ShamsiAIG</h2>
+    <div class="benefits">
+      <div class="card">Simple and beginner-friendly explanations</div>
+      <div class="card">Focus on risk management and long-term growth</div>
+      <div class="card">Honest and transparent crypto information</div>
+      <div class="card">Updated content based on market trends</div>
+    </div>
+  </section>  <!-- TESTIMONIALS -->  <section>
+    <h2>What Our Users Say</h2>
+    <p>“ShamsiAIG helped me understand crypto without stress. Everything is explained clearly.”<br><strong>— A. Musa</strong></p>
+    <p>“I stopped making random trades and started trading with a plan.”<br><strong>— S. Ibrahim</strong></p>
+  </section>  <!-- CALL TO ACTION -->  <section class="hero">
+    <h2>Start Your Crypto Journey Today</h2>
+    <p>Join ShamsiAIG and gain the knowledge and confidence you need to navigate the crypto market smarter.</p>
+    <a href="#" class="btn">Join Now</a>
+  </section>  <!-- FOOTER -->  <footer id="contact">
+    <h3>ShamsiAIG</h3>
+    <p>ShamsiAIG is dedicated to providing clear, reliable, and educational crypto content for traders and investors worldwide.</p>
+    <p>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </p>
+    <p>Email: support@cryptosphere.com</p>
+    <p>© 2025 ShamsiAiG. All rights reserved.</p>
+  </footer>  <!-- JAVASCRIPT -->  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Button click interaction
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Welcome to ShamsiAIG🚀');
+      });
+    });
+
+    // Simple scroll animation (fade-in effect)
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(40px)';
+      section.style.transition = 'all 0.6s ease';
+    });
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script></body>
+</html>
